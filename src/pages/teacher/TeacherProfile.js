@@ -21,7 +21,7 @@ const TeacherProfile = () => {
           <ProfileText>Email: {currentUser.email}</ProfileText>
           <ProfileText>Class: {teachSclass.sclassName}</ProfileText>
           <ProfileText>Subject: {teachSubject.subName}</ProfileText>
-          <ProfileText>School: {teachSchool.schoolName}</ProfileText>
+          <ProfileText>College: {teachSchool.schoolName}</ProfileText>
         </ProfileCardContent>
       </ProfileCard>
     </>
