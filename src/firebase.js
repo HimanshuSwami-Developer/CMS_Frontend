@@ -18,3 +18,4 @@ const app = initializeApp(firebaseConfig);
 
 
 export default app;
+// this is firebase
