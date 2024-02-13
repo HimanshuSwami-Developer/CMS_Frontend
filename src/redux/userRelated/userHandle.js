@@ -1,4 +1,5 @@
 import axios from 'axios';
+import toast from "react-hot-toast";
 import {
     authRequest,
     stuffAdded,
@@ -31,20 +32,30 @@ export const loginUser = (fields, role) => async (dispatch) => {
 };
 
 export const registerUser = (fields, role) => async (dispatch) => {
+    // e.preventDefault();
     dispatch(authRequest());
+    console.log(fields,role);
 
     try {
-        const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/${role}register`, fields, {
+        const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/${role}register`, fields,
+        {
             headers: { 'Content-Type': 'application/json' },
-        });
+        }
+        );
+        if (result?.success) {
+            toast.error(result?.message);
+        }
         if (result.data.schoolName) {
+            console.log("success pass");
             dispatch(authSuccess(result.data));
         }
         else if (result.data.school) {
             dispatch(stuffAdded());
+            console.log("success add pass")
         }
         else {
             dispatch(authFailed(result.data.message));
+            console.log("success pass auth faild")
         }
     } catch (error) {
         dispatch(authError(error));

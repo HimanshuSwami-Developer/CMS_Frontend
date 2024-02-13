@@ -240,7 +240,7 @@ const LoginPage = ({ role }) => {
                             >
                                 Login as Guest
                             </Button> */}
-                            {/* {role === "Admin" &&
+                            {role === "Admin" &&
                                 <Grid container>
                                     <Grid>
                                         Don't have an account?
@@ -251,7 +251,7 @@ const LoginPage = ({ role }) => {
                                         </StyledLink>
                                     </Grid>
                                 </Grid>
-                            } */}
+                            }
                         </Box>
                     </Box>
                 </Grid>
