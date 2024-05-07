@@ -20,9 +20,10 @@ const Homepage = () => {
                             College LMS
                         </StyledTitle>
                         <StyledText>
-                            Streamline school management, class organization, and add students and faculty.
-                            Seamlessly track attendance, assess performance, and provide feedback.
-                            Access records, view marks, and communicate effortlessly.
+                            Revolutionize college management with streamlined class organization and seamless integration of students and faculty,
+    cultivating an inspiring learning ecosystem 🌟. Easily monitor attendance, assess performance, and deliver tailored feedback,
+    empowering each student on their journey to success 📈. Access academic records effortlessly, instantly view grades, and 
+    promote open communication channels, nurturing a culture of collaboration and trust within the college community 📚.
                         </StyledText>
                         <StyledBox>
                             <StyledLink to="/choose">
